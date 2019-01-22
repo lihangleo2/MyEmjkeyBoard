@@ -1,0 +1,108 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#ffcdcdcd" />
+
+
+    <RelativeLayout
+        android:id="@+id/linear_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F9F9F9"
+        android:padding="7dp">
+
+
+        <ImageView
+            android:id="@+id/img_voice"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignBottom="@+id/bar_edit_text"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="6dp"
+            android:src="@mipmap/emj_voice" />
+
+        <io.github.rockerhieu.emojicon.EmojiconEditText
+            android:id="@+id/bar_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/emotion_button"
+            android:layout_toRightOf="@+id/img_voice"
+            android:background="@drawable/btn_line_selector"
+            android:hint="请输入内容"
+            android:imeOptions="actionSend"
+            android:inputType="textMultiLine"
+            android:maxLength="168"
+            android:minHeight="40dp"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="#000"
+            android:textColorHint="#a6a6a6"
+            android:textSize="16dp"
+            emojicon:emojiconSize="18dp"
+            android:textCursorDrawable="@drawable/edit_cursor_color"
+            android:cursorVisible="false"
+            android:gravity="center_vertical"
+            />
+
+        <ImageView
+            android:id="@+id/emotion_button"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignBottom="@+id/bar_edit_text"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="6dp"
+            android:layout_toLeftOf="@+id/image_add"
+            android:src="@mipmap/emj_xiao" />
+
+
+        <ImageView
+            android:id="@+id/image_add"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignBottom="@+id/bar_edit_text"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="6dp"
+            android:src="@mipmap/emj_add" />
+
+        <TextView
+            android:id="@+id/text_send"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_alignBottom="@+id/bar_edit_text"
+            android:layout_toRightOf="@+id/emotion_button"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/shape_for_send"
+            android:text="发送"
+            android:gravity="center"
+            android:textColor="#fff"
+            tools:visibility="visible"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#ffcdcdcd" />
+
+
+</LinearLayout>
